@@ -4,7 +4,6 @@
 
 #ifndef LOG_TAG
 #define LOG_TAG "FFMPEG_JNI"
-#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG,LOG_TAG ,__VA_ARGS__) // 定义LOGD类型
 #endif
 
 JNIEXPORT jint JNICALL
@@ -13,10 +12,8 @@ Java_com_chasonc_ndkffmpeg_FFmpeg_run(JNIEnv *env, jobject obj, jobjectArray com
     int argc = (*env)->GetArrayLength(env, commands);
     char *argv[argc];
 
-//    LOGD("=================:start");
     char info[1000] = {0};
     sprintf(info,"%s\n",avcodec_configuration());
-//    LOGD((*env)->NewStringUTF(env,info));
 
     int i;
     for (i = 0; i < argc; i++) {

@@ -26,7 +26,8 @@ add_library( # 库名称
 		     ${CPP_DIR}/ffmpeg.c
 		     ${CPP_DIR}/ffmpeg_filter.c
 		     ${CPP_DIR}/ffmpeg_opt.c
-		     ${CPP_DIR}/ffmpeg_cmd.c )
+		     ${CPP_DIR}/ffmpeg_cmd.c
+		     ${CPP_DIR}/ffmpeg_hw.c )
 
 # 用于各种类型声音、图像编解码
 add_library( # 库名称
